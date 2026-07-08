@@ -459,14 +459,8 @@ transform:translateY(-4px);
 
 .grid-projetos {
     display: grid;
-
     grid-template-columns: 1fr;
-
     gap: 30px;
-
-    max-width: 900px;
-
-    margin: 0 auto;
 }
 
 .projeto{
