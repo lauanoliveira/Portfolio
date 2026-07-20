@@ -1,511 +1,527 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lauan Oliveira | Portfólio</title>
+    <meta name="description" content="Portfólio profissional de Lauan Oliveira, Desenvolvedor Front-End em formação. Conheça minha evolução, projetos e jornada.">
+    
+    <!-- Google Fonts: Inter, Outfit, Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Space+Grotesk:wght@300;400;500;600;700&family=Sora:wght@300;400;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://geist.vercel.app/font.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://geist.vercel.app/font.css"></noscript>
+    <!-- Folha de Estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <div class="estrelas-fixas">
-      <span class="estrela e1"></span>
-      <span class="estrela e2"></span>
-      <span class="estrela e3"></span>
-      <span class="estrela e4"></span>
-      <span class="estrela e5"></span>
-      <span class="estrela e6"></span>
-      <span class="estrela e7"></span>
-      <span class="estrela e8"></span>
-      <span class="estrela e9"></span>
-      <span class="estrela e10"></span>
-      <span class="estrela e11"></span>
-      <span class="estrela e12"></span>
-      <span class="estrela e13"></span>
-      <span class="estrela e14"></span>
-      <span class="estrela e15"></span>
-      <span class="estrela e16"></span>
-      <span class="estrela e17"></span>
-      <span class="estrela e18"></span>
-      <span class="estrela e19"></span>
-      <span class="estrela e20"></span>
-      <span class="estrela e21"></span>
-      <span class="estrela e22"></span>
-      <span class="estrela e23"></span>
-      <span class="estrela e24"></span>
-      <span class="estrela e25"></span>
-      <span class="estrela e26"></span>
-      <span class="estrela e27"></span>
-      <span class="estrela e28"></span>
-      <span class="estrela e29"></span>
-      <span class="estrela e30"></span>
+    <!-- FASE 0: TELA DE CARREGAMENTO -->
+    <div id="loading-screen" class="loading-screen" aria-live="polite">
+        <!-- Canvas para partículas interativas de fundo -->
+        <canvas id="loading-canvas"></canvas>
+        
+        <div class="loading-content">
+            <span class="loading-pretitle">Bem-vindo ao meu</span>
+            <h2 class="loading-title">Portfólio</h2>
+        </div>
     </div>
-    <header>
-      <nav>
-        <h2 class="logo">✦</h2>
 
-        <ul>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#tecnologias">Tecnologias</a></li>
-          <li><a href="#jornada">Jornada</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
+    <!-- FASE 1: APRESENTAÇÃO -->
+    <main id="hero-section" class="hero-section hidden">
+        <!-- Canvas de fundo sutil para a seção principal -->
+        <canvas id="hero-canvas"></canvas>
+        
+        <!-- Efeitos de iluminação de fundo (Nebula Glows) -->
+        <div class="glow-orb glow-purple"></div>
+        <div class="glow-orb glow-blue"></div>
 
-    <main>
-      <!-- HERO -->
+        <div class="hero-container">
+            <header class="hero-header">
+                <span class="hero-pretitle">Olá! Meu nome é</span>
+                <h1 class="hero-title">Lauan Oliveira</h1>
+                <div class="hero-subtitle-container">
+                    <span class="rotator-item active">Desenvolvedor Front-End</span>
+                    <span class="rotator-item">Em evolução contínua</span>
+                </div>
+                <div class="hero-tech-changer">
+                    <span class="tech-label">Foco em</span>
+                    <span id="dynamic-tech" class="tech-highlight html">HTML</span>
+                </div>
+            </header>
 
-      <section class="hero">
-        <div class="hero-texto">
-          <p class="saudacao">Transformando curiosidade em projetos reais</p>
-
-          <h1>Lauan Oliveira</h1>
-
-          <p class="subtitulo">Desenvolvedor Front-End em formação</p>
-          <p class="frase-impacto">
-            Transformando curiosidade em projetos reais.
-          </p>
-
-          <p class="descricao">
-            Movido pela curiosidade, pela resolução de problemas e pelo desejo
-            constante de aprender. Transformando perguntas em conhecimento e
-            conhecimento em projetos reais.
-          </p>
-
-          <div class="botoes">
-            <a href="#projetos"> Ver Projetos </a>
-
-            <a href="https://github.com/lauanoliveira" target="_blank">
-              GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="hero-avatar">
-          <div class="particulas">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="orbita">
-            <div class="ponto ponto1"></div>
-
-            <div class="ponto ponto2"></div>
-
-            <div class="ponto ponto3"></div>
-
-            <div class="ponto ponto4"></div>
-
-            <div class="ponto ponto5"></div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- SOBRE -->
-
-      <section id="sobre" class="fade">
-        <h2>Sobre Mim</h2>
-
-      <p>
-        Acredito que a curiosidade é uma das habilidades mais importantes para quem
-        trabalha com tecnologia.
-     </p>
-
-     <p>
-       Sempre que encontro algo que não conheço, procuro entender não apenas a
-       resposta, mas também o que existe por trás dela. Essa mentalidade me levou a
-       estudar programação, onde descobri uma área em constante evolução e cheia de
-       oportunidades para aprender.
-     </p>
-
-    <p>
-      Antes da tecnologia, atuei por mais de três anos com suporte técnico e
-      atendimento ao cliente. Foi nesse período que desenvolvi habilidades de
-      comunicação, análise de problemas e busca por soluções, competências que
-      hoje aplico diariamente nos meus estudos e projetos.
-    </p>
-
-    <p>
-     Atualmente estou focado no desenvolvimento Front-End, construindo projetos,
-     aprofundando conhecimentos em HTML, CSS e JavaScript e transformando
-     curiosidade em experiência prática.
-    </p>
-      </section>
-
-      <!-- PROJETOS -->
-
-      <section id="projetos" class="fade">
-        <h2>Projetos</h2>
-
-        <div class="grid-projetos">
-          <div class="projeto fade-left">
-            <div class="projeto-topo">
-              <span>Projeto Front-End</span>
-            </div>
-
-            <div class="projeto-galeria">
-              <img src="./assets/login.png" alt="Tela Login YuroBank" />
-
-              <img
-                src="./assets/yurobank-interface.png"
-                alt="Tela Principal YuroBank"
-              />
-            </div>
-
-            <div class="projeto-info">
-              <h3>🏦 YuroBank</h3>
-
-             
-                <p>
-                 YuroBank é um banco digital fictício desenvolvido para colocar em prática
-                conceitos de HTML, CSS e JavaScript. O projeto foi criado com foco em
-                interfaces modernas, organização visual e evolução gradual das minhas
-                habilidades em Front-End, simulando funcionalidades inspiradas em aplicações
-                reais.
+            <div class="hero-body">
+                <p class="hero-text">
+                    Aqui você encontrará minha evolução, os projetos que venho desenvolvendo 
+                    e cada passo da minha jornada na programação.
                 </p>
-              
-
-              <div class="tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-
-              <div class="links-projeto">
-
-    <a
-      href="https://lauanoliveira.github.io/YuroBank/"
-      target="_blank">
-      Ver Projeto
-    </a>
-
-    <a
-      href="https://github.com/lauanoliveira/YuroBank"
-      target="_blank">
-      GitHub
-    </a>
-  </div>
-</div>
-</div>
-
-          <div class="projeto fade-right">
-            <img
-    src="./assets/shadowbloom-page.png"
-    alt="ShadowBloom"
-    class="shadow-img"
-/>
-
-            <div class="projeto-info">
-              <h3>🌑 ShadowBloom</h3>
-
-             <p>
-               Projeto autoral desenvolvido para transformar uma ideia abstrata em uma
-               experiência visual. ShadowBloom representa crescimento silencioso,
-               persistência e evolução contínua, combinando criatividade, design e
-               desenvolvimento Front-End.
-            </p>
-
-              <div class="tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-
-              <div class="links-projeto">
-
-    <a
-      href="https://lauanoliveira.github.io/ShadowBloom/"
-      target="_blank">
-      Ver Projeto
-    </a>
-
-    <a
-      href="https://github.com/lauanoliveira/ShadowBloom"
-      target="_blank">
-      GitHub
-    </a>
-</div>
-</div>
-</div>
-              </div>
+                <p class="hero-thanks">
+                    Este portfólio representa minha dedicação, aprendizado contínuo e paixão por tecnologia.
+                </p>
             </div>
-          </div>
+
+            <!-- Links de Redes Sociais com SVGs embutidos -->
+            <nav class="social-nav" aria-label="Links de contato">
+                <a href="https://www.linkedin.com/in/lauan-oliveira" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+                
+                <a href="https://github.com/lauanoliveira" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                
+                <a href="mailto:lauanoliveira25@gmail.com" class="social-link" aria-label="Gmail">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M24 5.457v13.909c0 .904-.732 1.634-1.636 1.634h-3.818V11l-6.545 4.545L5.455 11v10H1.636C.732 21 0 20.27 0 19.366V5.457c0-1.298 1.448-2.073 2.524-1.341l9.476 6.443 9.476-6.443C22.55 3.384 24 4.159 24 5.457z"/>
+                    </svg>
+                    <span>Gmail</span>
+                </a>
+            </nav>
         </div>
-      </section>
-
-      <!-- TECNOLOGIAS -->
-
-      <section id="tecnologias" class="fade">
-        <h2>Tecnologias</h2>
-
-        <div class="techs">
-          <div class="tech-card">
-            <div class="tech-icon">🌐</div>
-
-            <h3>HTML</h3>
-
-            <p>
-              Estruturação semântica de páginas web, organização de conteúdo e
-              boas práticas de acessibilidade.
-            </p>
-          </div>
-
-          <div class="tech-card">
-            <div class="tech-icon">🎨</div>
-
-            <h3>CSS</h3>
-
-            <p>
-              Estilização de interfaces, responsividade, animações e criação de
-              experiências visuais modernas.
-            </p>
-          </div>
-
-          <div class="tech-card">
-            <div class="tech-icon">⚡</div>
-
-            <h3>JavaScript</h3>
-
-            <p>
-              Manipulação do DOM, interatividade e construção de funcionalidades
-              dinâmicas para aplicações web.
-            </p>
-          </div>
-
-          <div class="tech-card">
-            <div class="tech-icon">🌿</div>
-
-            <h3>Git</h3>
-
-            <p>
-              Controle de versões para acompanhar alterações e evolução dos
-              projetos.
-            </p>
-          </div>
-
-          <div class="tech-card">
-            <div class="tech-icon">🐙</div>
-
-            <h3>GitHub</h3>
-
-            <p>
-              Hospedagem de projetos, compartilhamento de código e construção de
-              portfólio profissional.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- IDIOMAS -->
-
-      <section id="idiomas" class="fade">
-        <h2>Idiomas</h2>
-
-        <div class="idioma">🇧🇷 Português — Nativo</div>
-
-        <div class="idioma">🇺🇸 Inglês — Em aprendizado</div>
-
-        <div class="idioma">🇪🇸 Espanhol — Em aprendizado</div>
-
-        <div class="idioma">🇯🇵 Japonês — Em aprendizado</div>
-      </section>
-
-      <!-- JORNADA -->
-
-      <section id="jornada" class="fade">
-        <h2>Minha Jornada</h2>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-ponto"></div>
-
-            <div class="timeline-conteudo">
-              <h3>2022 — Primeiro contato com programação</h3>
-
-              <p>
-                Foi nesse período que tive meu primeiro contato com o mundo da
-                programação. No início tudo parecia complexo e distante da minha
-                realidade, mas a curiosidade falou mais alto. Descobri que por
-                trás de cada site, aplicativo ou sistema existiam pessoas
-                criando soluções através do código, e isso despertou algo em
-                mim.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-ponto"></div>
-
-            <div class="timeline-conteudo">
-              <h3>Brasil Center Comunicações</h3>
-
-              <p>
-                Durante mais de três anos atuei com suporte técnico e
-                atendimento ao cliente. Foi uma experiência que me ensinou muito
-                sobre resolução de problemas, comunicação, trabalho em equipe e
-                persistência. Diariamente eu precisava encontrar soluções para
-                situações diferentes, muitas vezes sob pressão, desenvolvendo
-                uma mentalidade voltada para análise e aprendizado contínuo. Ao
-                longo dessa trajetória também recebi reconhecimentos internos
-                pelo desempenho, colaboração com equipes e comprometimento com
-                os resultados.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-ponto"></div>
-
-            <div class="timeline-conteudo">
-              <h3>Retorno aos estudos</h3>
-
-              <p>
-                Depois de um período afastado da programação, decidi voltar aos
-                estudos com mais maturidade e disciplina. Passei a dedicar parte
-                da minha rotina ao aprendizado de HTML, CSS e JavaScript,
-                buscando não apenas entender como criar páginas, mas também
-                compreender os fundamentos por trás de cada tecnologia.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-ponto"></div>
-
-            <div class="timeline-conteudo">
-              <h3>ShadowBloom</h3>
-
-              <p>
-                Meu primeiro projeto pessoal. Mais do que um exercício técnico,
-                ShadowBloom representou uma ideia que eu queria transformar em
-                algo visual. O projeto foi inspirado no conceito de crescimento
-                silencioso, evolução constante e desenvolvimento pessoal. Foi
-                nele que comecei a explorar animações, efeitos visuais e
-                criatividade através do código.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-ponto"></div>
-
-            <div class="timeline-conteudo">
-              <h3>YuroBank</h3>
-
-              <p>
-                Um projeto mais desafiador que me permitiu evoluir em diversas
-                áreas do Front-End. Durante seu desenvolvimento pratiquei
-                estruturação de interfaces, estilização avançada, organização de
-                componentes e interatividade com JavaScript. Foi um marco
-                importante na minha evolução porque deixou de ser apenas uma
-                página e começou a se aproximar de uma aplicação real.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-ponto"></div>
-
-            <div class="timeline-conteudo">
-              <h3>Próximos Projetos</h3>
-
-              <p>
-                Minha jornada está apenas começando. Continuo estudando
-                diariamente, desenvolvendo novos projetos e buscando evoluir
-                tanto tecnicamente quanto profissionalmente. Cada projeto
-                representa uma nova oportunidade de aprender algo diferente e
-                transformar conhecimento em experiência.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTATO -->
-
-      <section id="contato" class="fade">
-        <h2>Contato</h2>
-
-        <p class="contato-descricao">
-          Estou sempre aberto para trocar experiências, aprender com outros
-          profissionais e conversar sobre tecnologia, desenvolvimento e novas
-          oportunidades.
-        </p>
-
-        <div class="contato-grid">
-          <a
-            href="https://github.com/lauanoliveira"
-            target="_blank"
-            class="contato-card"
-          >
-            <div class="contato-icon">🐙</div>
-
-            <h3>GitHub</h3>
-
-            <p>Veja meus projetos, estudos e evolução na programação.</p>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/lauan-oliveira/"
-            target="_blank"
-            class="contato-card"
-          >
-            <div class="contato-icon">💼</div>
-
-            <h3>LinkedIn</h3>
-
-            <p>
-              Conheça minha trajetória profissional, experiências e evolução na
-              área de tecnologia.
-            </p>
-          </a>
-
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=lauanoliveira25@gmail.com"
-            target="_blank"
-            class="contato-card"
-          >
-            <div class="contato-icon">📧</div>
-
-            <h3>Email</h3>
-
-            <p>lauanoliveira25@gmail.com</p>
-          </a>
-        </div>
-      </section>
-
-      <section class="proximo-capitulo fade">
-        <h2>O que vem a seguir?</h2>
-
-        <p>Minha trajetória ainda está sendo escrita.</p>
-
-        <p>
-          Cada projeto começa com uma pergunta, uma curiosidade ou uma ideia que
-          quero entender melhor.
-        </p>
-
-        <p>
-          Aprender sempre foi o ponto de partida. O código apenas transformou
-          essa curiosidade em algo que pode ser construído.
-        </p>
-
-        <p>
-          Quando encontro uma resposta, gosto de entender também o que existe
-          por trás dela. É essa mentalidade que levo para cada estudo, cada
-          desafio e cada projeto que desenvolvo.
-        </p>
-      </section>
     </main>
+
+    <!-- FASE 2: SOBRE MIM -->
+    <section id="about-section" class="about-section">
+        <div class="about-cinematic-stage">
+            <!-- Canvas da narrativa espacial -->
+            <canvas id="about-canvas"></canvas>
+
+            <!-- Textos Reflexivos (Condensação da Poeira) -->
+            <div class="about-reflections-container">
+                <div class="about-reflection-item">
+                    <p class="about-reflection-text">
+                        "Acredito que a curiosidade é uma das habilidades mais importantes para quem trabalha com tecnologia."
+                    </p>
+                </div>
+
+                <div class="about-reflection-item">
+                    <p class="about-reflection-text">
+                        "Sempre que encontro algo que não conheço, procuro entender não apenas a resposta, mas também o que existe por trás dela."
+                    </p>
+                </div>
+
+                <div class="about-reflection-item">
+                    <p class="about-reflection-text">
+                        "Desenvolvi habilidades de comunicação, análise de problemas e busca por soluções."
+                    </p>
+                </div>
+
+                <div class="about-reflection-item">
+                    <p class="about-reflection-text">
+                        "Atualmente estou aprofundando meus conhecimentos em desenvolvimento Front-End, transformando curiosidade em experiência prática."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASE 3: JORNADA (SCROLLYTELLING DE CONSTELAÇÕES) -->
+    <section id="journey-section" class="journey-section">
+        <!-- Container Sticky que prende o viewport durante a rolagem -->
+        <div class="journey-sticky-container">
+            <!-- Canvas 3D espacial para desenhar estrelas e constelações -->
+            <canvas id="journey-canvas"></canvas>
+
+            <!-- Centralizador de Textos e Títulos da Jornada -->
+            <div class="journey-overlay-content">
+                <!-- Slides Reflexivos Intermediários -->
+                <div class="journey-slide phrase-slide" id="journey-phrase-1">
+                    <p class="journey-reflective-text">"A curiosidade sempre me levou mais longe."</p>
+                </div>
+
+                <div class="journey-slide phrase-slide" id="journey-phrase-2">
+                    <p class="journey-reflective-text">"Nem toda evolução acontece sob os holofotes."</p>
+                </div>
+
+                <!-- Slide 0: Apresentação da Jornada (Portal) -->
+                <div class="journey-slide" id="journey-intro">
+                    <h2 class="journey-main-title">Minha Jornada</h2>
+                </div>
+
+                <!-- Slide 1: 2022 -->
+                <div class="journey-slide" id="journey-slide-1">
+                    <div class="journey-card-content">
+                        <span class="journey-card-year">2022</span>
+                        <h3 class="journey-card-title">Primeiro contato com programação</h3>
+                        <p class="journey-card-text">
+                            Foi nesse período que tive meu primeiro contato com o mundo da programação. No início tudo parecia complexo e distante da minha realidade, mas a curiosidade falou mais alto. Descobri que por trás de cada site, aplicativo ou sistema existiam pessoas criando soluções através do código, e isso despertou algo em mim.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Brasil Center -->
+                <div class="journey-slide" id="journey-slide-2">
+                    <div class="journey-card-content">
+                        <span class="journey-card-year">2022 — 2025</span>
+                        <h3 class="journey-card-title">Brasil Center Comunicações</h3>
+                        <p class="journey-card-text">
+                            Durante mais de três anos atuei com suporte técnico e atendimento ao cliente. Foi uma experiência que me ensinou muito sobre resolução de problemas, comunicação, trabalho em equipe e persistência. Diariamente eu precisava encontrar soluções para situações diferentes, muitas vezes sob pressão, desenvolvendo uma mentalidade voltada para análise e aprendizado contínuo. Ao longo dessa trajetória também recebi reconhecimentos internos pelo desempenho, colaboração com equipes e comprometimento com os resultados.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Retorno -->
+                <div class="journey-slide" id="journey-slide-3">
+                    <div class="journey-card-content">
+                        <span class="journey-card-year">Estudos</span>
+                        <h3 class="journey-card-title">Retorno aos estudos</h3>
+                        <p class="journey-card-text">
+                            Depois de um período afastado da programação, decidi voltar aos estudos com mais maturidade e disciplina. Passei a dedicar parte da minha rotina ao aprendizado de HTML, CSS e JavaScript, buscando não apenas entender como criar páginas, mas também compreender os fundamentos por trás de cada tecnologia.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 4: ShadowBloom -->
+                <div class="journey-slide" id="journey-slide-4">
+                    <div class="journey-card-content">
+                        <span class="journey-card-year">Projeto</span>
+                        <h3 class="journey-card-title">ShadowBloom</h3>
+                        <p class="journey-card-text">
+                            Meu primeiro projeto pessoal. Mais do que um exercício técnico, ShadowBloom representou uma ideia que eu queria transformar em algo visual. O projeto foi inspirado no conceito de crescimento silencioso, evolução constante e desenvolvimento pessoal. Foi nele que comecei a explorar animações, efeitos visuais e criatividade através do código.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 5: YuroBank -->
+                <div class="journey-slide" id="journey-slide-5">
+                    <div class="journey-card-content">
+                        <span class="journey-card-year">Desafio</span>
+                        <h3 class="journey-card-title">YuroBank</h3>
+                        <p class="journey-card-text">
+                            Um projeto mais desafiador que me permitiu evoluir em diversas áreas do Front-End. Durante seu desenvolvimento pratiquei estruturação de interfaces, estilização avançada, organização de componentes e interatividade com JavaScript. Foi um marco importante na minha evolução porque deixou de ser apenas uma página e começou a se aproximar de uma aplicação real.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 6: Próximos Projetos -->
+                <div class="journey-slide" id="journey-slide-6">
+                    <div class="journey-card-content">
+                        <span class="journey-card-year">Futuro</span>
+                        <h3 class="journey-card-title">Próximos Projetos</h3>
+                        <p class="journey-card-text">
+                            Minha jornada está apenas começando. Continuo estudando diariamente, desenvolvendo novos projetos e buscando evoluir tanto tecnicamente quanto profissionalmente. Cada projeto representa uma nova oportunidade de aprender algo diferente e transformar conhecimento em experiência.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 7: Ponte para os Projetos -->
+                <div class="journey-slide" id="journey-bridge">
+                    <div class="journey-card-content centered-bridge">
+                        <span class="journey-card-year">Descobertas</span>
+                        <h3 class="journey-card-title">Conquistas da Jornada</h3>
+                        <p class="journey-card-text">
+                            Durante essa travessia, ideias se materializaram em código. Conheça as descobertas tecnológicas que nasceram dessa evolução constante...
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 8: Showcase YuroBank -->
+                <div class="journey-slide project-slide" id="journey-project-yurobank">
+                    <div class="project-showcase-split">
+                        <div class="project-info">
+                            <span class="project-number">01 / MEU PROJETO MAIS AVANÇADO</span>
+                            <h3 class="project-name">YuroBank</h3>
+                            <p class="project-description">
+                                YuroBank é um banco digital fictício desenvolvido para colocar em prática conceitos de HTML, CSS e JavaScript.
+                                O projeto foi criado com foco em interfaces modernas, organização visual e evolução gradual das minhas habilidades em Front-End, simulando funcionalidades inspiradas em aplicações reais.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://lauanoliveira.github.io/YuroBank/" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="Ver Projeto">
+                                    <span class="project-btn-inner">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                        <span>Ver Projeto</span>
+                                    </span>
+                                </a>
+                                <a href="https://github.com/lauanoliveira/YuroBank" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="GitHub">
+                                    <span class="project-btn-inner">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                        <span>GitHub</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-mockups yurobank-mockups">
+                            <div class="mockup-device mockup-login">
+                                <div class="mockup-frame">
+                                    <img src="assets/images/yurobank_login.png" alt="YuroBank Login" class="mockup-image">
+                                </div>
+                            </div>
+                            <div class="mockup-device mockup-main">
+                                <div class="mockup-frame">
+                                    <img src="assets/images/yurobank_main.png" alt="YuroBank Dashboard" class="mockup-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 9: Showcase ShadowBloom -->
+                <div class="journey-slide project-slide" id="journey-project-shadowbloom">
+                    <div class="project-showcase-split reverse">
+                        <div class="project-mockups shadowbloom-mockup">
+                            <div class="mockup-browser">
+                                <div class="browser-header">
+                                    <div class="browser-dots">
+                                        <span class="dot close"></span>
+                                        <span class="dot minimize"></span>
+                                        <span class="dot maximize"></span>
+                                    </div>
+                                    <div class="browser-address-bar">shadowbloom.io</div>
+                                </div>
+                                <div class="browser-content">
+                                    <img src="assets/images/shadowbloom.png" alt="ShadowBloom Interface" class="mockup-image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-number">02 / MEU PRIMEIRO PROJETO</span>
+                            <h3 class="project-name">ShadowBloom</h3>
+                            <p class="project-description">
+                                Projeto autoral desenvolvido para transformar uma ideia abstrata em uma experiência visual.
+                                ShadowBloom representa crescimento silencioso, persistência e evolução contínua, combinando criatividade, design e desenvolvimento Front-End.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://lauanoliveira.github.io/ShadowBloom/" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="Ver Projeto">
+                                    <span class="project-btn-inner">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                        <span>Ver Projeto</span>
+                                    </span>
+                                </a>
+                                <a href="https://github.com/lauanoliveira/ShadowBloom" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="GitHub">
+                                    <span class="project-btn-inner">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                        <span>GitHub</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 10: Conclusão -->
+                <div class="journey-slide" id="journey-outro">
+                    <h3 class="journey-outro-text">A jornada continua...</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASE 5: TECNOLOGIAS (CONSTELAÇÃO TECNOLÓGICA VIVA) -->
+    <section class="tech-section" id="tech-stack">
+        <!-- Overlay para a frase de transição fixed/sticky -->
+        <div class="tech-transition-overlay" id="tech-transition-overlay">
+            <p class="tech-transition-phrase">Tecnologia não é apenas código.<br>É a ponte entre ideias e realidade.</p>
+        </div>
+
+        <div class="tech-sticky-wrapper">
+            <!-- Canvas de Fundo para os Poros Estelares e Poeira Cósmica -->
+            <canvas id="tech-bg-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></canvas>
+            
+            <!-- Nebulosas Cósmicas Organicas de Fundo -->
+            <div class="tech-nebula-container" id="tech-nebula-container">
+                <div class="tech-nebula nebula-top"></div>
+                <div class="tech-nebula nebula-bottom"></div>
+            </div>
+
+            <div class="tech-container">
+                <h2 class="tech-title">Tecnologias que impulsionam meus projetos</h2>
+                <p class="tech-subtitle">As ferramentas, tecnologias e plataformas que utilizo para transformar ideias em experiências digitais.</p>
+            </div>
+            
+            <div class="tech-constellation-container" id="tech-constellation">
+                <!-- Estrela 1: HTML -->
+                <div class="tech-star" data-tech="html" aria-label="HTML5">
+                    <div class="tech-star-inner">
+                        <div class="tech-lightning"></div>
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M1.5 0h21l-1.9 21.2L12 24 3.4 21.2zM18.5 6.8H8.2l.2 2.7h10.1l-.3 3.3H8.7l.2 2.4 3.1.8 3.1-.8 2.2-2.4.3-3.2H6.3l-.5-5.3h13.3z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Estrela 2: CSS -->
+                <div class="tech-star" data-tech="css" aria-label="CSS3">
+                    <div class="tech-star-inner">
+                        <div class="tech-lightning"></div>
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M1.5 0h21l-1.9 21.2L12 24 3.4 21.2zM12 18.6l4.3-1.2.6-6.3H6.8l-.2-2.7h10.4l.2-2.7H6.2l.7 7.7h6.6l-.3 3.5-3.2.9-3.2-.9-.2-2H4.4l.4 4.9z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Estrela 3: JavaScript -->
+                <div class="tech-star" data-tech="javascript" aria-label="JavaScript">
+                    <div class="tech-star-inner">
+                        <div class="tech-lightning"></div>
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M0 0h24v24H0V0zm22.034 18.268c-.153-.897-.841-1.419-1.785-1.817-.743-.306-1.57-.511-1.57-.996 0-.434.332-.715.829-.715.46 0 .766.229 1.02.663l2.222-1.429c-.588-1.021-1.634-1.685-3.089-1.685-2.12 0-3.6 1.149-3.6 3.038 0 2.22 1.991 2.655 3.344 3.243.894.383 1.251.689 1.251 1.123 0 .46-.434.791-.97.791-.689 0-1.123-.383-1.404-.97l-2.221 1.276c.562 1.149 1.761 1.94 3.701 1.94 2.247 0 3.753-1.123 3.753-3.218v-.245zm-10.089-8.27h-2.731v10.985c0 1.225-.689 1.839-1.71 1.839-.996 0-1.558-.511-1.787-1.353L3.436 21c.562 1.379 1.864 2.375 4.086 2.375 3.166 0 4.423-1.66 4.423-4.443V9.998z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Estrela 4: Git -->
+                <div class="tech-star" data-tech="git" aria-label="Git">
+                    <div class="tech-star-inner">
+                        <div class="tech-lightning"></div>
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M23.384 11.236L12.764.616a1.47 1.47 0 0 0-2.078 0L9.124 2.178l3.12 3.12a1.86 1.86 0 0 1 2.502 2.502l3.109 3.109a1.859 1.859 0 0 1-.027 2.6l-3.13 3.13a1.86 1.86 0 0 1-2.584-.027l-3.13-3.13a1.86 1.86 0 0 1 0-2.584l3.13-3.13-3.12-3.12L1.236 10.852a1.47 1.47 0 0 0 0 2.078l10.62 10.62a1.47 1.47 0 0 0 2.078 0l10.62-10.62a1.47 1.47 0 0 0-.17-2.094z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Estrela 5: GitHub -->
+                <div class="tech-star" data-tech="github" aria-label="GitHub">
+                    <div class="tech-star-inner">
+                        <div class="tech-lightning"></div>
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Estrela 6: ChatGPT -->
+                <div class="tech-star" data-tech="chatgpt" aria-label="ChatGPT">
+                    <div class="tech-star-inner">
+                        <div class="tech-lightning"></div>
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M21.743 12.331a5.617 5.617 0 0 0-.236-2.302 5.61 5.61 0 0 0-1.564-2.483c-1.378-1.32-3.39-1.884-5.263-1.476a5.578 5.578 0 0 0-4.685-2.399 5.565 5.565 0 0 0-4.707 2.656 5.597 5.597 0 0 0-2.355.228A5.578 5.578 0 0 0 1.26 9.09a5.626 5.626 0 0 0 .236 2.302 5.595 5.595 0 0 0 1.565 2.483c1.378 1.319 3.39 1.883 5.263 1.475a5.587 5.587 0 0 0 4.693 2.404c1.889 0 3.639-.958 4.684-2.657 1.58.556 3.313.435 4.791-.334a5.574 5.574 0 0 0 2.274-2.333c.319-.887.433-1.834.337-2.766zm-11.832 5.3a3.344 3.344 0 0 1-2.34-.963L11.53 14.4a.276.276 0 0 0 .093-.207v-4.887l1.41.815c.08.046.13.13.13.223v4.062a3.345 3.345 0 0 1-3.252 3.228zm-4.72-2.735a3.35 3.35 0 0 1-.98-2.337v-4.148l3.959 2.285c.082.047.181.047.262 0l4.227-2.44v1.63a.257.257 0 0 0 .13.224l3.52 2.032a3.336 3.336 0 0 1-1.637 4.195 3.35 3.35 0 0 1-2.585.253v-5.268l-3.328-1.921 4.733 2.733v-1.63a.262.262 0 0 0-.13-.223l-3.52-2.032v4.062zm-.985-6.5a3.35 3.35 0 0 1 2.343.962L9.47 9.6a.276.276 0 0 0-.094.207v4.887l-1.41-.814a.258.257 0 0 0-.13-.223v-4.06a3.342 3.342 0 0 1 3.25-3.23zm4.72 2.734a3.35 3.35 0 0 1 .98 2.338v4.148L11.78 12.67a.26.26 0 0 0-.262 0l-4.227 2.44v-1.63a.26.26 0 0 0-.13-.224L3.64 11.224A3.336 3.336 0 0 1 5.277 7.03c.806-.465 1.748-.567 2.585-.253v5.268l3.328 1.921zm6.576 4.72a3.35 3.35 0 0 1-2.342-.962L11.53 9.6a.276.276 0 0 0-.093.207v4.887l1.41.814c.08.046.13.13.13.223v4.06a3.342 3.342 0 0 1-3.25 3.23zm-4.72-2.734a3.35 3.35 0 0 1-.98-2.338v-4.148l3.96-2.286a.26.26 0 0 0 .262 0l4.226 2.44v1.63a.26.26 0 0 0 .13.224l3.52 2.032a3.336 3.336 0 0 1-1.637 4.195 3.35 3.35 0 0 1-2.585.253v-5.268l-3.328-1.921z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Estrela 7: Gemini -->
+                <div class="tech-star" data-tech="gemini" aria-label="Gemini">
+                    <div class="tech-star-inner">
+                        <div class="tech-lightning"></div>
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12 24c0-6.627-5.373-12-12-12 6.627 0 12-5.373 12-12 0 6.627 5.373 12 12 12-6.627 0-12 5.373-12 12z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Estrela 8: Antigravity -->
+                <div class="tech-star" data-tech="antigravity" aria-label="Antigravity">
+                    <div class="tech-star-inner">
+                        <div class="tech-lightning"></div>
+                        <svg viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 2L1 21h4.5l2.2-4.5h8.6l2.2 4.5H23L12 2zm-1.8 10L12 7.8l1.8 4.2h-3.6z"/>
+                            <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="3 3"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FASE 6: JORNADA TECNOLÓGICA CINEMATOGRÁFICA (HTML, CSS, JS) -->
+    <section class="tech-journey-section" id="tech-journey">
+        <div class="tech-journey-sticky-container">
+            <!-- Canvas para efeitos visuais das cenas (Grids, fluxos Bezier, Conexões JS) -->
+            <canvas id="tech-journey-canvas"></canvas>
+            
+            <!-- Nebulosas de fundo para a nova área cósmica -->
+            <div class="tech-journey-nebula"></div>
+        </div>
+    </section>
+
+    <!-- FASE 7: ENCERRAMENTO DA JORNADA E CONTATOS (ENTIDADE CÓSMICA) -->
+    <section class="ending-section" id="ending">
+        <div class="ending-container">
+            <!-- Coluna Esquerda: Mensagem Humana e Contatos Minimalistas -->
+            <div class="ending-content">
+                <h2 class="ending-title">Obrigado por explorar este portfólio.</h2>
+                <p class="ending-subtitle">
+                    Cada projeto representa uma etapa da minha evolução como desenvolvedor. Esta é apenas a primeira de muitas jornadas que ainda estão por vir.
+                </p>
+                
+                <div class="ending-contacts">
+                    <a href="https://github.com/lauanoliveira" target="_blank" class="contact-link" id="contact-github" aria-label="GitHub — Ver projetos">
+                        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <span class="contact-details"><span>GitHub</span><small>Ver projetos →</small></span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lauan-oliveira" target="_blank" class="contact-link" id="contact-linkedin" aria-label="LinkedIn — Perfil profissional">
+                        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                        <span class="contact-details"><span>LinkedIn</span><small>Perfil profissional →</small></span>
+                    </a>
+                    <a href="mailto:lauanoliveira25@gmail.com" class="contact-link" id="contact-email" aria-label="Email — Entrar em contato">
+                        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <span class="contact-details"><span>Email</span><small>Entrar em contato →</small></span>
+                    </a>
+                </div>
+            </div> <!-- Fecha ending-content -->
+
+            <!-- Coluna Direita: Entidade Cósmica e Painel Holográfico -->
+            <div class="ending-interactive-wrapper">
+                <canvas id="ending-canvas"></canvas>
+                
+                <div class="holo-panel" id="holo-panel">
+                    <!-- Símbolos e Tecnologias Flutuantes (Somente Ícones) -->
+                    <div class="holo-btn" data-tech="gmail" aria-label="Gmail">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </div>
+                    <div class="holo-btn" data-tech="linkedin" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    </div>
+                    <div class="holo-btn" data-tech="github" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </div>
+                    
+                    <div class="holo-btn" data-tech="html" aria-label="HTML5">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M1.5 0h21l-1.9 21.2L12 24 3.4 21.2zM18.5 6.8H8.2l.2 2.7h10.1l-.3 3.3H8.7l.2 2.4 3.1.8 3.1-.8 2.2-2.4.3-3.2H6.3l-.5-5.3h13.3z"/></svg>
+                    </div>
+                    <div class="holo-btn" data-tech="css" aria-label="CSS3">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M1.5 0h21l-1.9 21.2L12 24 3.4 21.2zM12 18.6l4.3-1.2.6-6.3H6.8l-.2-2.7h10.4l.2-2.7H6.2l.7 7.7h6.6l-.3 3.5-3.2.9-3.2-.9-.2-2H4.4l.4 4.9z"/></svg>
+                    </div>
+                    <div class="holo-btn" data-tech="javascript" aria-label="JavaScript">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M0 0h24v24H0V0zm22.034 18.268c-.153-.897-.841-1.419-1.785-1.817-.743-.306-1.57-.511-1.57-.996 0-.434.332-.715.829-.715.46 0 .766.229 1.02.663l2.222-1.429c-.588-1.021-1.634-1.685-3.089-1.685-2.12 0-3.6 1.149-3.6 3.038 0 2.22 1.991 2.655 3.344 3.243.894.383 1.251.689 1.251 1.123 0 .46-.434.791-.97.791-.689 0-1.123-.383-1.404-.97l-2.221 1.276c.562 1.149 1.761 1.94 3.701 1.94 2.247 0 3.753-1.123 3.753-3.218v-.245zm-10.089-8.27h-2.731v10.985c0 1.225-.689 1.839-1.71 1.839-.996 0-1.558-.511-1.787-1.353L3.436 21c.562 1.379 1.864 2.375 4.086 2.375 3.166 0 4.423-1.66 4.423-4.443V9.998z"/></svg>
+                    </div>
+                    <div class="holo-btn" data-tech="git" aria-label="Git">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M23.384 11.236L12.764.616a1.47 1.47 0 0 0-2.078 0L9.124 2.178l3.12 3.12a1.86 1.86 0 0 1 2.502 2.502l3.109 3.109a1.859 1.859 0 0 1-.027 2.6l-3.13 3.13a1.86 1.86 0 0 1-2.584-.027l-3.13-3.13a1.86 1.86 0 0 1 0-2.584l3.13-3.13-3.12-3.12L1.236 10.852a1.47 1.47 0 0 0 0 2.078l10.62 10.62a1.47 1.47 0 0 0 2.078 0l10.62-10.62a1.47 1.47 0 0 0-.17-2.094z"/></svg>
+                    </div>
+                    <div class="holo-btn" data-tech="antigravity" aria-label="Antigravity">
+                        <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 2L1 21h4.5l2.2-4.5h8.6l2.2 4.5H23L12 2zm-1.8 10L12 7.8l1.8 4.2h-3.6z"/><circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="3 3"/></svg>
+                    </div>
+                    <div class="holo-btn" data-tech="chatgpt" aria-label="ChatGPT">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M21.743 12.331a5.617 5.617 0 0 0-.236-2.302 5.61 5.61 0 0 0-1.564-2.483c-1.378-1.32-3.39-1.884-5.263-1.476a5.578 5.578 0 0 0-4.685-2.399 5.565 5.565 0 0 0-4.707 2.656 5.597 5.597 0 0 0-2.355.228A5.578 5.578 0 0 0 1.26 9.09a5.626 5.626 0 0 0 .236 2.302 5.595 5.595 0 0 0 1.565 2.483c1.378 1.319 3.39 1.883 5.263 1.475a5.587 5.587 0 0 0 4.693 2.404c1.889 0 3.639-.958 4.684-2.657 1.58.556 3.313.435 4.791-.334a5.574 5.574 0 0 0 2.274-2.333c.319-.887.433-1.834.337-2.766zm-11.832 5.3a3.344 3.344 0 0 1-2.34-.963L11.53 14.4a.276.276 0 0 0 .093-.207v-4.887l1.41.815c.08.046.13.13.13.223v4.062a3.345 3.345 0 0 1-3.252 3.228zm-4.72-2.735a3.35 3.35 0 0 1-.98-2.337v-4.148l3.959 2.285c.082.047.181.047.262 0l4.227-2.44v1.63a.257.257 0 0 0 .13.224l3.52 2.032a3.336 3.336 0 0 1-1.637 4.195 3.35 3.35 0 0 1-2.585.253v-5.268l-3.328-1.921 4.733 2.733v-1.63a.262.262 0 0 0-.13-.223l-3.52-2.032v4.062zm-.985-6.5a3.35 3.35 0 0 1 2.343.962L9.47 9.6a.276.276 0 0 0-.094.207v4.887l-1.41-.814a.258.257 0 0 0-.13-.223v-4.06a3.342 3.342 0 0 1 3.25-3.23zm4.72 2.734a3.35 3.35 0 0 1 .98 2.338v4.148L11.78 12.67a.26.26 0 0 0-.262 0l-4.227 2.44v-1.63a.26.26 0 0 0-.13-.224L3.64 11.224A3.336 3.336 0 0 1 5.277 7.03c.806-.465 1.748-.567 2.585-.253v5.268l3.328 1.921zm6.576 4.72a3.35 3.35 0 0 1-2.342-.962L11.53 9.6a.276.276 0 0 0-.093.207v4.887l1.41.814c.08.046.13.13.13.223v4.06a3.342 3.342 0 0 1-3.25 3.23zm-4.72-2.734a3.35 3.35 0 0 1-.98-2.338v-4.148l3.96-2.286a.26.26 0 0 0 .262 0l4.226 2.44v1.63a.26.26 0 0 0 .13.224l3.52 2.032a3.336 3.336 0 0 1-1.637 4.195 3.35 3.35 0 0 1-2.585.253v-5.268l-3.328-1.921z"/></svg>
+                    </div>
+                    <div class="holo-btn" data-tech="gemini" aria-label="Gemini">
+                        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 24c0-6.627-5.373-12-12-12 6.627 0 12-5.373 12-12 0 6.627 5.373 12 12 12-6.627 0-12 5.373-12 12z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script de Comportamento -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
